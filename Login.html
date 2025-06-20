@@ -5,37 +5,37 @@
   <title>Login</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
       font-family: Arial, sans-serif;
       background: linear-gradient(to bottom right, #cce7ff, #99ccff);
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
     }
 
-    form {
+    .login-container {
       background-color: #ffffff;
       padding: 30px 40px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       width: 300px;
     }
 
-    h2 {
+    .login-container h2 {
       text-align: center;
-      color: #003366;
       margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 15px;
       color: #003366;
     }
 
-    input[type="text"],
-    input[type="password"] {
+    .login-container label {
+      display: block;
+      margin-bottom: 12px;
+      color: #003366;
+    }
+
+    .login-container input {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -45,34 +45,36 @@
       color: #003366;
     }
 
-    button {
+    .login-container button {
       width: 100%;
       padding: 10px;
+      margin-top: 20px;
       background-color: #0066cc;
       color: white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
-      margin-top: 10px;
     }
 
-    button:hover {
+    .login-container button:hover {
       background-color: #005bb5;
     }
   </style>
 </head>
 <body>
-  <form id="loginForm">
+  <div class="login-container">
     <h2>Login</h2>
-    <label>Username:
-      <input type="text" id="username" required>
-    </label>
-    <label>Password:
-      <input type="password" id="password" required>
-    </label>
-    <button type="submit">Login</button>
-  </form>
+    <form id="loginForm">
+      <label>Username:
+        <input type="text" id="username" required>
+      </label>
+      <label>Password:
+        <input type="password" id="password" required>
+      </label>
+      <button type="submit">Login</button>
+    </form>
+  </div>
 
   <script src="script.js"></script>
 </body>
